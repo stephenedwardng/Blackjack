@@ -40,4 +40,10 @@ public class TestDealer {
         assertEquals(3, dealer.hand.size());
     }
 
+
+//  // Mockito not installing. Manual tests satisfactory
+//    @Test
+//    public void canRevealOneCard(){
+//        assertEquals("ACE of Spades. ", dealer.revealOneCard());
+//    }
 }

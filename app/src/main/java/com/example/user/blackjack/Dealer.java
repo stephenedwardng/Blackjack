@@ -1,5 +1,7 @@
 package com.example.user.blackjack;
 
+import java.util.ArrayList;
+
 /**
  * Created by user on 24/06/2017.
  */
@@ -15,5 +17,9 @@ public class Dealer extends Participant {
 
     public int getThreshold() {
         return threshold;
+    }
+
+    public String revealOneCard() {
+        return hand.get(0).prettyName();
     }
 }
