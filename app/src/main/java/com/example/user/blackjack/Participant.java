@@ -40,4 +40,11 @@ public abstract class Participant {
         return sum;
     }
 
+    public String revealHand() {
+        String message = "";
+        for(Card card : hand)
+            message += card.prettyName() + ". ";
+        return message;
+    }
+
 }

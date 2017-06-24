@@ -35,6 +35,11 @@ public class TestPlayer {
         assertEquals(3, player.hand.size());
     }
 
+    @Test
+    public void canRevealHand() {
+        assertEquals("Pretty card names", player.revealHand());
+    }
+
 //    // Working. Test with Mockito
 //    @Test
 //    public void value() {
