@@ -11,33 +11,12 @@ import java.util.Random;
 
 public class Deck {
 
-//    public Rank deal(){
-//        // Fill deck.
-//        Rank[] ranks = Rank.values();
-//
-//        // return a random card from deck,
-//        Random random = new Random();
-//        int index = random.nextInt(ranks.length);
-//
-//        // include remove from deck once you combine
-//        // Rank and Suit into Card
-//
-//        return ranks[index];
-//    }
-
     public Card deal(){
-        // Fill deck.
-        Rank[] ranks = Rank.values();
 
-        // return a random rank from deck,
+        Rank[] ranks = Rank.values();
         Random random = new Random();
         int index = random.nextInt(ranks.length);
-
-        // include remove from deck once you combine
-        // Rank and Suit into Card
-
         Rank rank = ranks[index];
-
 
         Suit[] suits = Suit.values();
         Random randomSuit = new Random();
