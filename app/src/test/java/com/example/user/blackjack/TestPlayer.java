@@ -16,6 +16,7 @@ public class TestPlayer {
     @Before
     public void before() {
         player = new Player("Eddie");
+        player.startingHand();
     }
 
     @Test
@@ -23,30 +24,20 @@ public class TestPlayer {
         assertEquals("Eddie", player.getName());
     }
 
-    @Test
-    public void canGetHand() {
-        assertNotNull(player.startingHand());
-    }
+//    @Test
+//    public void canGetHand() {
+//        assertNotNull(player.startingHand());
+//    }
 
     @Test
     public void canFillHand(){
-        assertEquals(2, player.startingHand().size());
+        assertEquals(2, player.hand.size());
     }
 
-//    @Test
-//    public void canGetPrettyHand() {
-//        player.getHand();
-//        assertEquals("QUEEN of Diamonds", player.prettyHand());
-//
-//    }
+    @Test
+    public void canHit(){
+        player.hit();
+        assertEquals(3, player.hand.size());
+    }
 
-//    @Test
-//    public void canTakeCard() {
-//        assertNotNull(player.takeCard());
-//    }
-
-//    @Test
-//    public void canGetCardName() {
-//
-//    }
 }

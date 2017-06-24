@@ -20,15 +20,23 @@ public class Player {
         return name;
     }
 
-    public ArrayList<Card> startingHand() {
+//    public ArrayList<Card> startingHand() {
+//        hand.add(deck.deal());
+//        hand.add(deck.deal());
+//        return hand;
+//    }
+
+    public void startingHand() {
         hand.add(deck.deal());
         hand.add(deck.deal());
-        return hand;
     }
 
+    public ArrayList<Card> currentHand() {
+        return this.hand;
+    }
 
-//    public void hit() {
-//
-//    }
+    public void hit() {
+        hand.add(deck.deal());
+    }
 
 }
