@@ -25,4 +25,17 @@ public class Card {
     public Suit getSuit() {
         return this.suit;
     }
+
+    public String suitType() {
+        return this.suit.getSuitType();
+    }
+
+    public int rankValue() {
+        return this.rank.getValue();
+    }
+
+    public String prettyName() {
+        return getRank() + " of " + suitType();
+    }
+
 }

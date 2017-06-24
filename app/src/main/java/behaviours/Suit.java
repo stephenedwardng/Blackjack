@@ -15,7 +15,7 @@ public enum Suit {
         this.suit = suit;
     }
 
-    public String getSuit() {
+    public String getSuitType() {
         return this.suit;
     }
 
