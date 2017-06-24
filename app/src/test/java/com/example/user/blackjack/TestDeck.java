@@ -23,7 +23,6 @@ public class TestDeck {
     @Test
     public void testDeal(){
         assertNotNull(deck.deal());
-        //assertEquals("ACE of Spades", deck.deal());
     }
 
 
