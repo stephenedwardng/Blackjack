@@ -20,6 +20,11 @@ public class TestDealer {
     }
 
     @Test
+    public void checkThreshold() {
+        assertEquals(17, dealer.getThreshold());
+    }
+
+    @Test
     public void canGetName() {
         assertEquals("Lynne", dealer.getName());
     }
