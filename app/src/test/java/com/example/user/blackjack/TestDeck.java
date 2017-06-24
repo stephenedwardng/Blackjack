@@ -15,5 +15,17 @@ public class TestDeck {
 
     Deck deck;
 
+    @Before
+    public void before(){
+        deck = new Deck();
+    }
+
+    @Test
+    public void testDeal(){
+        assertNotNull(deck.deal());
+        //assertEquals("ACE of Spades", deck.deal());
+    }
+
+
 
 }
