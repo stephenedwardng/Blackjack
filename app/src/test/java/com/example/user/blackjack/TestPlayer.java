@@ -24,11 +24,6 @@ public class TestPlayer {
         assertEquals("Eddie", player.getName());
     }
 
-//    @Test
-//    public void canGetHand() {
-//        assertNotNull(player.startingHand());
-//    }
-
     @Test
     public void canFillHand(){
         assertEquals(2, player.hand.size());
@@ -38,6 +33,11 @@ public class TestPlayer {
     public void canHit(){
         player.hit();
         assertEquals(3, player.hand.size());
+    }
+
+    @Test
+    public void value() {
+        assertEquals(10, player.value());
     }
 
 }

@@ -1,6 +1,8 @@
 package com.example.user.blackjack;
 
 import java.util.ArrayList;
+import behaviours.Rank;
+import behaviours.Suit;
 
 /**
  * Created by user on 24/06/2017.
@@ -37,6 +39,13 @@ public class Player {
 
     public void hit() {
         hand.add(deck.deal());
+    }
+
+    public int value() {
+        int sum = 0;
+        for(Card card : hand)
+            sum += card.rankValue();
+        return sum;
     }
 
 }
