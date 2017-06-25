@@ -30,13 +30,13 @@ public class Game {
         return dealer;
     }
 
-    public boolean checkForBlackjack() {
-        if (player.value() == BLACKJACK
-                || dealer.value() == BLACKJACK) {
-            return true;
+    public void checkForBlackjack() {
+        if (dealer.value() == BLACKJACK) {
+            displayWinner(-1);
         }
-        else
-            return false;
+        else if (player.value() == BLACKJACK) {
+            displayWinner(1);
+        }
     }
 
     public boolean checkDealerThreshold() {
@@ -47,24 +47,29 @@ public class Game {
             return false;
     }
 
-    public int checkOverTwentyOne() {
+    public void checkOverTwentyOne() {
         if (player.value() > BLACKJACK) {
-            return -1;
+            displayWinner(-1);
         }
         else if (dealer.value() > BLACKJACK) {
-            return 1;
+            displayWinner(1);
         }
-        else return 0;
+    }
+
+    public void compareHands() {
+        int result =  (player.value() > dealer.value() ? 1 : -1);
+        displayWinner(result);
     }
 
     public String displayWinner(int result){
+        String message = "";
         switch (result){
             case 1:
-                return player.getName() + " wins";
+                message = player.getName() + " wins. ";
             case -1:
-                return dealer.getName() + " wins";
-            default:
-                return null;
+                message = dealer.getName() + " wins. ";
         }
+
+        return message + player.getName() + " had " + player.revealHand() + ". " + dealer.getName() + " had " + dealer.revealHand();
     }
 }
