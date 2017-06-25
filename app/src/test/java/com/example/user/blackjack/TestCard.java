@@ -26,13 +26,18 @@ public class TestCard {
     }
 
     @Test
+    public void canGetRank(){
+        assertEquals("Ace", card.rankType());
+    }
+
+    @Test
     public void canGetSuit(){
         assertEquals("Spades", card.suitType());
     }
 
     @Test
     public void prettyName(){
-        assertEquals("ACE of Spades", card.prettyName());
+        assertEquals("Ace of Spades", card.prettyName());
     }
 
 }

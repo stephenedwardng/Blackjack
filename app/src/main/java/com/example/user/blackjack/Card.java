@@ -26,6 +26,10 @@ public class Card {
         return this.suit;
     }
 
+    public String rankType() {
+        return this.rank.getRankType();
+    }
+
     public String suitType() {
         return this.suit.getSuitType();
     }
@@ -35,7 +39,7 @@ public class Card {
     }
 
     public String prettyName() {
-        return getRank() + " of " + suitType();
+        return rankType() + " of " + suitType();
     }
 
 }

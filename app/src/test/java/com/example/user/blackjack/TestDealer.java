@@ -44,6 +44,6 @@ public class TestDealer {
 //  // Mockito not installing. Manual tests satisfactory
 //    @Test
 //    public void canRevealOneCard(){
-//        assertEquals("ACE of Spades. ", dealer.revealOneCard());
+//        assertEquals("Ace of Spades. ", dealer.revealOneCard());
 //    }
 }

@@ -38,9 +38,9 @@ public class TestPlayer {
 //    // Mockito not installing. Manual tests satisfactory
 //    @Test
 //    public void canRevealHand() {
-//        assertEquals("ACE of Spades. QUEEN of Hearts.", player.revealHand());
+//        assertEquals("Ace of Spades. Queen of Hearts.", player.revealHand());
 //    }
-
+//
 //    // Mockito not installing. Manual tests satisfactory
 //    @Test
 //    public void value() {

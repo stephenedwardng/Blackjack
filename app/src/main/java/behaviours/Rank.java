@@ -5,23 +5,29 @@ package behaviours;
  */
 
 public enum Rank {
-    ACE(11),
-    KING(10),
-    QUEEN(10),
-    JACK(10),
-    TEN(10),
-    NINE(9),
-    EIGHT(8),
-    SEVEN(7),
-    SIX(6),
-    FIVE(5),
-    FOUR(4),
-    THREE(3),
-    TWO(2);
+    ACE("Ace", 11),
+    KING("King",10),
+    QUEEN("Queen", 10),
+    JACK("Jack", 10),
+    TEN("Ten", 10),
+    NINE("Nine", 9),
+    EIGHT("Eight", 8),
+    SEVEN("Seven", 7),
+    SIX("Six", 6),
+    FIVE("Five", 5),
+    FOUR("Four", 4),
+    THREE("Three", 3),
+    TWO("Two", 2);
 
+    private String rankType;
     private int value;
-    Rank(int value){
+    Rank(String rankType, int value){
+        this.rankType = rankType;
         this.value = value;
+    }
+
+    public String getRankType() {
+        return this.rankType;
     }
 
     public int getValue() {
