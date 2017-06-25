@@ -42,7 +42,7 @@ public class Runner {
 
             if (game.hitOrStand(choice) == HitOrStand.HIT) {
                 player.hit();
-                if (!game.checkDealerThreshold()) dealer.hit();
+                if (game.checkDealerThreshold()) dealer.hit();
             }
 
             game.checkForBlackjack();
@@ -56,8 +56,14 @@ public class Runner {
                 && player.value() < game.BLACKJACK);
 
         game.checkForBlackjack();
-        game.checkOverTwentyOne();
-        int winner = game.compareHands();
+
+        int winner;
+        if (game.checkOverTwentyOne() != 0) {
+            winner = game.checkOverTwentyOne();
+        }
+        else {
+            winner = game.compareHands();
+        }
         String message = game.displayWinner(winner);
         System.out.println(message);
 

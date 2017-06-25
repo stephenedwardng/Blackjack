@@ -51,19 +51,15 @@ public class Game {
             return false;
     }
 
-    public void checkOverTwentyOne() {
+    public int checkOverTwentyOne() {
         if (player.value() > BLACKJACK) {
-            displayWinner(-1);
+            return -1;
         }
         else if (dealer.value() > BLACKJACK) {
-            displayWinner(1);
+            return 1;
         }
+        return 0;
     }
-
-//    public void compareHands() {
-//        int result =  (player.value() > dealer.value() ? 1 : -1);
-//        displayWinner(result);
-//    }
 
     public int compareHands() {
         return  (player.value() > dealer.value() ? 1 : -1);
@@ -79,7 +75,7 @@ public class Game {
                 message = dealer.getName() + " wins. ";
         }
 
-        return message + player.getName() + " had " + player.revealHand() + ". " + dealer.getName() + " had " + dealer.revealHand();
+        return String.format("%s. %s had %s. %s had %s. Game over.", message, player.getName(), player.revealHand(), dealer.getName(), dealer.revealHand());
     }
 
     public HitOrStand hitOrStand(char choice) {
@@ -93,11 +89,4 @@ public class Game {
         }
     }
 
-//    public void gameLoop() {
-//
-//        while (hitOrStand() == HitOrStand.HIT) {
-//            player.hit();
-//            if (!checkDealerThreshold()) dealer.hit();
-//        }
-//    }
 }
