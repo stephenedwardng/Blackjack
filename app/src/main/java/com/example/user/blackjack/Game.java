@@ -74,6 +74,7 @@ public class Game {
         switch (result){
             case 1:
                 message = player.getName() + " wins. ";
+                break;
             case -1:
                 message = dealer.getName() + " wins. ";
         }
