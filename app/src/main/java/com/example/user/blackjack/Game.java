@@ -56,4 +56,15 @@ public class Game {
         }
         else return 0;
     }
+
+    public String displayWinner(int result){
+        switch (result){
+            case 1:
+                return player.getName() + " wins";
+            case -1:
+                return dealer.getName() + " wins";
+            default:
+                return null;
+        }
+    }
 }

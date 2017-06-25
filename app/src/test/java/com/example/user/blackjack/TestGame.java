@@ -35,9 +35,14 @@ public class TestGame {
 //        assertEquals(true, game.checkDealerThreshold());
 //    }
 
+//    @Test
+//    public void canCheckOverTwentyOne() {
+//        assertEquals(1, game.checkOverTwentyOne());
+//    }
+
     @Test
-    public void canCheckOverTwentyOne() {
-        assertEquals(1, game.checkOverTwentyOne());
+    public void canDisplayWinner() {
+        assertEquals("Lynne wins", game.displayWinner(-1));
     }
 
 }
