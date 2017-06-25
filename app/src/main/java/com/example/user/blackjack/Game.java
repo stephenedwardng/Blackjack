@@ -1,5 +1,9 @@
 package com.example.user.blackjack;
 
+import java.util.Scanner;
+
+import behaviours.HitOrStand;
+
 /**
  * Created by user on 25/06/2017.
  */
@@ -71,5 +75,19 @@ public class Game {
         }
 
         return message + player.getName() + " had " + player.revealHand() + ". " + dealer.getName() + " had " + dealer.revealHand();
+    }
+
+    public HitOrStand hitOrStand() {
+        Scanner scan = new Scanner(System.in);
+        String input = scan.nextLine().toUpperCase();
+        char choice = input.charAt(0);
+        switch(choice){
+            case 'H' :
+                return HitOrStand.HIT;
+            case 'S' :
+                return HitOrStand.STAND;
+            default :
+                return null;
+        }
     }
 }
