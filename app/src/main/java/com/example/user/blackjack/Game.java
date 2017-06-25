@@ -9,13 +9,13 @@ public class Game {
     Deck deck;
     Player player;
     Dealer dealer;
-    int blackjack;
+    final int BLACKJACK;
 
     public Game(Deck deck, Player player, Dealer dealer) {
         this.deck = deck;
         this.player = player;
         this.dealer = dealer;
-        blackjack = 21;
+        BLACKJACK = 21;
     }
 
     public Deck getDeck() {
@@ -31,12 +31,29 @@ public class Game {
     }
 
     public boolean checkForBlackjack() {
-        if (player.value() == blackjack
-                || dealer.value() == blackjack)
-        {
+        if (player.value() == BLACKJACK
+                || dealer.value() == BLACKJACK) {
             return true;
         }
         else
             return false;
+    }
+
+    public boolean checkDealerThreshold() {
+        if (dealer.value() < dealer.getThreshold()) {
+            return true;
+        }
+        else
+            return false;
+    }
+
+    public int checkOverTwentyOne() {
+        if (player.value() > BLACKJACK) {
+            return -1;
+        }
+        else if (dealer.value() > BLACKJACK) {
+            return 1;
+        }
+        else return 0;
     }
 }

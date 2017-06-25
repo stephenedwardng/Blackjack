@@ -25,9 +25,19 @@ public class TestGame {
         game = new Game(deck, player, dealer);
     }
 
+//    @Test
+//    public void canCheckForBlackJack() {
+//        assertEquals(false, game.checkForBlackjack());
+//    }
+//
+//    @Test
+//    public void canCheckDealerThreshold() {
+//        assertEquals(true, game.checkDealerThreshold());
+//    }
+
     @Test
-    public void canCheckForBlackJack() {
-        assertEquals(false, game.checkForBlackjack());
+    public void canCheckOverTwentyOne() {
+        assertEquals(1, game.checkOverTwentyOne());
     }
 
 }

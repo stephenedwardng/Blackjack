@@ -8,15 +8,15 @@ import java.util.ArrayList;
 
 public class Dealer extends Participant {
 
-    private int threshold;
+    private final int THRESHOLD;
 
     public Dealer(String name) {
         super(name);
-        this.threshold = 17;
+        this.THRESHOLD = 17;
     }
 
     public int getThreshold() {
-        return threshold;
+        return THRESHOLD;
     }
 
     public String revealOneCard() {
