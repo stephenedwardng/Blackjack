@@ -77,10 +77,10 @@ public class Game {
         return message + player.getName() + " had " + player.revealHand() + ". " + dealer.getName() + " had " + dealer.revealHand();
     }
 
-    public HitOrStand hitOrStand() {
-        Scanner scan = new Scanner(System.in);
-        String input = scan.nextLine().toUpperCase();
-        char choice = input.charAt(0);
+    public HitOrStand hitOrStand(char choice) {
+//        Scanner scan = new Scanner(System.in);
+//        String input = scan.nextLine().toUpperCase();
+//        char choice = input.charAt(0);
         switch(choice){
             case 'H' :
                 return HitOrStand.HIT;
@@ -90,4 +90,12 @@ public class Game {
                 return null;
         }
     }
+
+//    public void gameLoop() {
+//
+//        while (hitOrStand() == HitOrStand.HIT) {
+//            player.hit();
+//            if (!checkDealerThreshold()) dealer.hit();
+//        }
+//    }
 }

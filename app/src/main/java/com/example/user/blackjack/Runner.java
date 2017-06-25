@@ -31,17 +31,33 @@ public class Runner {
         game.checkForBlackjack();
         game.checkOverTwentyOne();
 
-        System.out.println("Press H to HIT or S STAND: ");
-//        Scanner scan = new Scanner(System.in);
-//        String input = scan.nextLine().toUpperCase();
-//        char choice = input.charAt(0);
-//        switch(choice){
-//            case 'H' :
-//                return HitOrStand.HIT;
-//            case 'S' :
-//                return HitOrStand.STAND;
-//            default :
-//                return null;
-//        }
+        char choice;
+
+        do {
+            System.out.println("Press H to HIT or S STAND: ");
+
+            Scanner scan = new Scanner(System.in);
+            String input = scan.nextLine().toUpperCase();
+            choice = input.charAt(0);
+
+            if (game.hitOrStand(choice) == HitOrStand.HIT) {
+                player.hit();
+                if (!game.checkDealerThreshold()) dealer.hit();
+            }
+
+            game.checkForBlackjack();
+            game.checkOverTwentyOne();
+
+            System.out.println(String.format("%s has %s with a value of %s", player.getName(), player.revealHand(), player.value()));
+            System.out.println(String.format("%s has %s", dealer.getName(), dealer.revealOneCard()));
+
+        } while (game.hitOrStand(choice) == HitOrStand.HIT
+                && dealer.value() < game.BLACKJACK
+                && player.value() < game.BLACKJACK);
+
+        System.out.println("Stand option begins ");
+
+
+
     }
 }
