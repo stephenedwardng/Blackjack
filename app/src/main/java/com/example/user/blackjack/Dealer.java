@@ -1,7 +1,5 @@
 package com.example.user.blackjack;
 
-import java.util.ArrayList;
-
 /**
  * Created by user on 24/06/2017.
  */

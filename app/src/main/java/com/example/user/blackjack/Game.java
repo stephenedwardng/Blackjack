@@ -1,7 +1,5 @@
 package com.example.user.blackjack;
 
-import java.util.Scanner;
-
 import behaviours.HitOrStand;
 
 /**

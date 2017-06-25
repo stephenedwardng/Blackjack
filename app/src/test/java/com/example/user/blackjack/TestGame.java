@@ -25,16 +25,19 @@ public class TestGame {
         game = new Game(deck, player, dealer);
     }
 
+//    // Mockito not installing. Manual tests satisfactory
 //    @Test
 //    public void canCheckForBlackJack() {
 //        assertEquals(false, game.checkForBlackjack());
 //    }
-//
+
+//    // Mockito not installing. Manual tests satisfactory
 //    @Test
 //    public void canCheckDealerThreshold() {
 //        assertEquals(true, game.checkDealerThreshold());
 //    }
 
+//    // Mockito not installing. Manual tests satisfactory
 //    @Test
 //    public void canCheckOverTwentyOne() {
 //        assertEquals(1, game.checkOverTwentyOne());
@@ -45,6 +48,7 @@ public class TestGame {
         assertEquals("Lynne wins", game.displayWinner(-1));
     }
 
+//    // Mockito not installing. Manual tests satisfactory
 //    @Test
 //    public void canCompareHands() {
 //        int result = game.compareHands();

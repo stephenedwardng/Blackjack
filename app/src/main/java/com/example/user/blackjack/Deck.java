@@ -2,7 +2,6 @@ package com.example.user.blackjack;
 
 import behaviours.Rank;
 import behaviours.Suit;
-import java.util.ArrayList;
 import java.util.Random;
 
 /**
