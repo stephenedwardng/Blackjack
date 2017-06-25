@@ -60,9 +60,13 @@ public class Game {
         }
     }
 
-    public void compareHands() {
-        int result =  (player.value() > dealer.value() ? 1 : -1);
-        displayWinner(result);
+//    public void compareHands() {
+//        int result =  (player.value() > dealer.value() ? 1 : -1);
+//        displayWinner(result);
+//    }
+
+    public int compareHands() {
+        return  (player.value() > dealer.value() ? 1 : -1);
     }
 
     public String displayWinner(int result){
@@ -78,9 +82,6 @@ public class Game {
     }
 
     public HitOrStand hitOrStand(char choice) {
-//        Scanner scan = new Scanner(System.in);
-//        String input = scan.nextLine().toUpperCase();
-//        char choice = input.charAt(0);
         switch(choice){
             case 'H' :
                 return HitOrStand.HIT;

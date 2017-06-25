@@ -55,9 +55,11 @@ public class Runner {
                 && dealer.value() < game.BLACKJACK
                 && player.value() < game.BLACKJACK);
 
-        System.out.println("Stand option begins ");
-
-
+        game.checkForBlackjack();
+        game.checkOverTwentyOne();
+        int winner = game.compareHands();
+        String message = game.displayWinner(winner);
+        System.out.println(message);
 
     }
 }
