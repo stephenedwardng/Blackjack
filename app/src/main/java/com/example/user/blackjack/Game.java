@@ -67,13 +67,14 @@ public class Game {
         String message = "";
         switch (result){
             case 1:
-                message = player.getName() + " wins. ";
+                message = player.getName() + " wins";
                 break;
             case -1:
-                message = dealer.getName() + " wins. ";
+                message = dealer.getName() + " wins";
         }
 
-        return String.format("%s. %s had %s. %s had %s. Game over.", message, player.getName(), player.revealHand(), dealer.getName(), dealer.revealHand());
+        return String.format("%s. %s had %s. %s had %s. Game over.", message, player.getName(),
+                player.revealHand(), dealer.getName(), dealer.revealHand());
     }
 
     public HitOrStand hitOrStand(char choice) {

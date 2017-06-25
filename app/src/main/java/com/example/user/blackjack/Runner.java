@@ -19,7 +19,7 @@ public class Runner {
 
         // Welcome
         System.out.println(String.format("%s is playing %s the Dealer", player.getName(), dealer.getName()));
-        System.out.println("Let's deal the first hand...");
+        System.out.println("Let's deal the first hand");
 
         // Deal starting hands
         player.startingHand();
